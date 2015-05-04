@@ -1,0 +1,11 @@
+<section>
+    <article ng-repeat="r in reviews">
+        <header>
+            <h1>{{r.coffeeShop.name}}</h1>
+        </header>
+        <p>
+            {{r.reviewer.username}} gave this shop {{r.rating}}&#9733;<br>
+            {{r.text}}
+        </p>
+    </article>
+</section>

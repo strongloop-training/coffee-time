@@ -1,0 +1,14 @@
+<section>
+  <h2>Reviews by {{currentUser.username}}</h2>
+  
+  <article ng-repeat="r in reviews.slice().reverse()">
+    <header>
+      <h3>{{r.coffeeShop.name}}</h3>
+    </header>
+
+    <p>
+        {{r.rating}}&#9733;<br>
+        {{r.text}}
+    </p>
+  </article>
+</section>

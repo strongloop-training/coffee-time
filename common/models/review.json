@@ -16,8 +16,11 @@
   "relations": {
     "reviewer": {
       "type": "belongsTo",
-      "model": "Reviewer",
-      "foreignKey": ""
+      "model": "Reviewer"
+    },
+    "coffeeShop": {
+      "type": "belongsTo",
+      "model": "CoffeeShop"
     }
   },
   "acls": [

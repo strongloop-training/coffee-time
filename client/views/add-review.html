@@ -1,0 +1,32 @@
+<section>
+  <form name="form" ng-submit="submitForm()">
+    <fieldset>
+      <legend>Add Review</legend>
+
+      <div>
+        <label>Coffee Shop:</label>
+        <select
+            ng-model="selectedShop"
+            ng-options="shop as shop.name for shop in coffeeShops"></select>
+      </div>
+
+      <div>
+        <label>Rating</label>
+        <input type="radio" ng-model="review.rating" value="1">1&#9733;
+        <input type="radio" ng-model="review.rating" value="2">2&#9733;
+        <input type="radio" ng-model="review.rating" value="3">3&#9733;
+        <input type="radio" ng-model="review.rating" value="4">4&#9733;
+        <input type="radio" ng-model="review.rating" value="5">5&#9733;
+      </div>
+
+      <div>
+        <label>Comments</label>
+        <input type='text' ng-model="review.comments">
+      </div>
+
+      <div>
+        <button>Add Review</button>
+      </div>
+    </fieldset>
+  </form>
+<section>
