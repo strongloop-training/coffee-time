@@ -1,0 +1,21 @@
+{
+  "name": "Reviewer",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "hometown": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "CoffeeShop": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Review": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Reviewer": {
+    "dataSource": "db",
+    "public": true
+  }
+}
