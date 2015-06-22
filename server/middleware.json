@@ -8,6 +8,9 @@
   "session": {
   },
   "auth": {
+    "../server/middleware/logger": {
+        "enabled": true
+    }
   },
   "parse": {
   },
