@@ -2,10 +2,12 @@ module.exports = function() {
     
     return function logger(req, res, next) {
         
-        console.log('Here I am! ' + req.url);
+        if (/\/login$/.test(req.url)) {
+            console.log('A user is logging in!');
+        }
         
+        // don't forget to call next() !
         next();
-        
     };
     
 }

@@ -2,6 +2,9 @@
   "name": "Reviewer",
   "base": "User",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
     "hometown": {
       "type": "string",

@@ -1,12 +1,6 @@
 
 module.exports = function(app) {
 
-    app.models.Role.create({
-        name: 'admin'
-    }, function(err, role) {
-        if (err) { cb(err); }
-    });
-
     if (process.env.NODE_ENV === 'development') {
         var Reviewer = app.models.Reviewer;
         var CoffeeShop = app.models.CoffeeShop;

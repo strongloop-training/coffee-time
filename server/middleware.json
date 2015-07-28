@@ -5,20 +5,17 @@
   "initial": {
     "compression": {}
   },
-  "session": {
-  },
+  "session": {},
   "auth": {
     "../server/middleware/logger": {
-        "enabled": true
+      "enabled": true
     }
   },
-  "parse": {
-  },
-  "routes": {
-  },
+  "parse": {},
+  "routes": {},
   "files": {
     "loopback#static": {
-        "params": "$!../client"
+      "params": "$!../client"
     }
   },
   "final": {

@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "user": "foo",
+    "password": "bar",
+    "host": "my-db-server.com",
+    "port": 27017,
+    "database": "coffee-prod",
+    "connector": "mongodb"
+  }
+}

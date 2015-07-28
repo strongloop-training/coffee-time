@@ -1,3 +1,7 @@
+'use strict';
+
+var loopback = require('loopback');
+
 module.exports = function(CoffeeShop) {
 
     CoffeeShop.status = function(id, cb) {
@@ -8,9 +12,12 @@ module.exports = function(CoffeeShop) {
                 return;
             }
             
-            var hora = (new Date()).getHours();
-            var status = (hora >= shop.horaDeApertura &&
-                          hora < shop.horaDeCerrado)
+            // Hmm... wonder who this is? Check the current context!
+            console.log( loopback.getCurrentContext().get('accessToken') );
+            
+            var hour = (new Date()).getHours();
+            var status = (hour >= shop.openingHour &&
+                          hour < shop.closingHour)
             
             cb(null, status);
         });
@@ -23,12 +30,13 @@ module.exports = function(CoffeeShop) {
                 arg: 'id',
                 type: 'number',
                 description: 'Model id',
-                required: true
+                required: true,
+                http: { source: 'path' }
             },
             accessType: 'READ',
-            returns: { arg: 'status', type: 'boolean' },
+            returns: { arg: 'isOpen', type: 'boolean' },
             http: [
-                {verb: 'get', path: '/:id/status'}
+                { verb: 'get', path: '/:id/status' }
             ]
         }
     );
