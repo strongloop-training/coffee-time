@@ -20,22 +20,22 @@
             </p>
             <nav ng-show="currentUser">
                 <ul>
-                    <li><a ui-sref="logout" ui-sref-active="active">Log out</a></li>
-                    <li><a ui-sref="my-reviews" ui-sref-active="active">My Reviews</a></li>
-                    <li><a ui-sref="all-reviews" ui-sref-active="active">All Reviews</a></li>
-                    <li><a ui-sref="add-review" ui-sref-active="active">Add Review</a></li>
+                    <li><a href="#/logout">Log out</a></li>
+                    <li><a href="#/my-reviews">My Reviews</a></li>
+                    <li><a href="#/all-reviews">All Reviews</a></li>
+                    <li><a href="#/add-review">Add Review</a></li>
                 </ul>
             </nav>
             <p ng-hide="currentUser">
-                <a ui-sref="login" ui-sref-active="active">Log in</a>
+                <a href="#/login">Log in</a>
             </p>
         </header>
         
-        <main ui-view></main>
+        <main ng-view></main>
         
         <script src="js/vendor/angular/angular.js"></script>
         <script src="js/vendor/angular-resource/angular-resource.js"></script>
-        <script src="js/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="js/vendor/angular-route/angular-route.js"></script>
         
         <script src="js/app.js"></script>
         <script src="js/services/lb-services.js"></script>

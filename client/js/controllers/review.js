@@ -26,9 +26,9 @@ angular.module('app')
     '$scope',
     'CoffeeShop',
     'Review',
-    '$state',
+    '$location',
     '$rootScope',
-    function($scope, CoffeeShop, Review, $state, $rootScope) {
+    function($scope, CoffeeShop, Review, $location, $rootScope) {
       $scope.coffeeShops = [];
       $scope.selectedShop = {};
       $scope.review = {};
@@ -50,7 +50,7 @@ angular.module('app')
           })
           .$promise
           .then(function() {
-            $state.go('my-reviews');
+            $location.path('/my-reviews');
           });
       };
     }

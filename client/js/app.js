@@ -1,51 +1,46 @@
-angular.module('app', ['ui.router', 'lbServices'])
+angular.module('app', ['ngRoute', 'lbServices'])
     .config([
-        '$stateProvider',
-        '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
-            $stateProvider
-                .state('forbidden', {
-                    url: '/forbidden',
-                    templateUrl: 'views/forbidden.html',
+        '$routeProvider',
+        function($routeProvider) {
+            $routeProvider
+                .when('/forbidden', {
+                    templateUrl: 'views/forbidden.html'
                 })
-                .state('all-reviews', {
-                    url: '/all-reviews',
+                .when('/', {
                     templateUrl: 'views/all-reviews.html',
                     controller: 'AllReviewsController'
                 })
-                .state('login', {
-                    url: '/login',
+                .when('/login', {
                     templateUrl: 'views/login.html',
                     controller: 'AuthLoginController'
                 })
-                .state('logout', {
-                    url: '/logout',
+                .when('/logout', {
+                    templateUrl: 'views/logout.html',
                     controller: 'AuthLogoutController'
                 })
-                .state('my-reviews', {
-                    url: '/my-reviews',
+                .when('/my-reviews', {
                     templateUrl: 'views/my-reviews.html',
                     controller: 'MyReviewsController',
                     authenticate: true
                 })
-                .state('add-review', {
-                    url: '/add-review',
+                .when('/add-review', {
                     templateUrl: 'views/add-review.html',
                     controller: 'AddReviewController',
                     authenticate: true
+                })
+                .otherwise({
+                    redirectTo : '/'
                 });
-            
-            $urlRouterProvider.otherwise('all-reviews');
         }])
     .run([
         '$rootScope',
-        '$state',
-        function($rootScope, $state) {
-            $rootScope.$on('$stateChangeStart', function(event, next) {
+        '$location',
+        function($rootScope, $location) {
+            $rootScope.$on('$routeChangeStart', function(event, next) {
                 // redirect to login page if not logged in
                 if (next.authenticate && !$rootScope.currentUser) {
                     event.preventDefault(); //prevent current page from loading
-                    $state.go('forbidden');
+                    $location.path('/forbidden');
                 }
             });
         }]);

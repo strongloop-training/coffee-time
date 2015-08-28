@@ -3,8 +3,8 @@ angular
   .controller('AuthLoginController', [
     '$scope',
     'AuthService',
-    '$state',
-    function($scope, AuthService, $state) {
+    '$location',
+    function($scope, AuthService, $location) {
       $scope.user = {
         email: '',
         password: ''
@@ -13,7 +13,7 @@ angular
       $scope.login = function() {
         AuthService.login($scope.user.email, $scope.user.password)
           .then(function() {
-            $state.go('my-reviews');
+            $location.path('/my-reviews');
           });
       };
     }
@@ -21,11 +21,11 @@ angular
   .controller('AuthLogoutController', [
     '$scope',
     'AuthService',
-    '$state',
-    function($scope, AuthService, $state) {
+    '$location',
+    function($scope, AuthService, $location) {
       AuthService.logout()
         .then(function() {
-          $state.go('all-reviews');
+          $location.path('/');
         });
     }
   ]);
