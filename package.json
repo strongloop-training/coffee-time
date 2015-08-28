@@ -5,15 +5,18 @@
   "private": true,
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint ."
+    "pretest": "echo 'YOU SHOULD RUN jshint HERE!'",
+    "test": "node_modules/mocha/bin/mocha test/"
   },
   "dependencies": {
+    "chai": "^3.2.0",
     "compression": "^1.0.3",
     "errorhandler": "^1.1.1",
     "loopback": "^2.8.0",
     "loopback-boot": "^2.6.5",
     "loopback-connector-mongodb": "^1.8.0",
     "loopback-datasource-juggler": "^2.7.0",
+    "mocha": "^2.2.5",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {

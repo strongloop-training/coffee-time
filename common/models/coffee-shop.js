@@ -13,7 +13,7 @@ module.exports = function(CoffeeShop) {
             }
             
             // Hmm... wonder who this is? Check the current context!
-            console.log( loopback.getCurrentContext().get('accessToken') );
+            // console.log( loopback.getCurrentContext().get('accessToken') );
             
             var hour = (new Date()).getHours();
             var status = (hour >= shop.openingHour &&
