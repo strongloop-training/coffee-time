@@ -41,7 +41,7 @@
     "public": true
   },
   "Review": {
-    "dataSource":  "mongodb_dev",
+    "dataSource": "mongodb_dev",
     "public": true
   }
 }
