@@ -31,5 +31,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "CoffeeShop": {
+    "dataSource": "db",
+    "public": true
   }
 }
