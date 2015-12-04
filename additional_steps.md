@@ -16,3 +16,14 @@ Successfully added user: {
 	]
 }
 ```
+
+## Mysql datasource
+* `npm install -S loopback-connector-mysql`
+* passwordless login for mysql user "root" (or change your credentials in `datasources.json`)
+* create a local mysql database called `coffeeshop`: `create database coffeeshop`;
+* create the `CoffeeShop` table **automatically** from arc:
+  * run `slc arc`
+  * click "compose"
+  * click "CoffeeShop" under "Models"
+  * click "Migrate Model"
+  * Saving coffeeshops (from api explorer) should now work
