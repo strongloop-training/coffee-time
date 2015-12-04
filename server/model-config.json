@@ -37,11 +37,11 @@
     "public": true
   },
   "Reviewer": {
-    "dataSource": "db",
+    "dataSource": "mongodb_dev",
     "public": true
   },
   "Review": {
-    "dataSource": "db",
+    "dataSource":  "mongodb_dev",
     "public": true
   }
 }
