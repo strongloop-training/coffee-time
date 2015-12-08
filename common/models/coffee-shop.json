@@ -9,6 +9,14 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "openingHour": {
+      "type": "number",
+      "required": true
+    },
+    "closingHour": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
