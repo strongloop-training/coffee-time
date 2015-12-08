@@ -35,9 +35,9 @@ module.exports = function(app) {
       if (err) return cb(err);
       var CoffeeShop = app.models.CoffeeShop;
       var shops = [
-        {name: 'Bel Cafe'},
-        {name: 'Three Bees Coffee House'},
-        {name: 'Caffe Artigiano'},
+        {name: 'Bel Cafe',openingHour:10, closingHour:18},
+        {name: 'Three Bees Coffee House',openingHour:6, closingHour:15},
+        {name: 'Caffe Artigiano',openingHour:17, closingHour:24},
       ];
       //add city if it's in the model
       if(CoffeeShop.definition.properties.hasOwnProperty('city')){

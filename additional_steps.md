@@ -27,3 +27,9 @@ Successfully added user: {
   * click "CoffeeShop" under "Models"
   * click "Migrate Model"
   * Saving coffeeshops (from api explorer) should now work
+
+## Remote methods
+* Run CoffeeShop model migration again after adding opening/closing hour fields,
+ or update the database field manually (migrate may complain but it should
+ work).
+* Note that data mocking script has been updated
