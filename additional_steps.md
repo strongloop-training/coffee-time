@@ -33,3 +33,6 @@ Successfully added user: {
  or update the database field manually (migrate may complain but it should
  work).
 * Note that data mocking script has been updated
+
+## Adding frontend
+* Remember to `bower install`
