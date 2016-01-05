@@ -13,7 +13,11 @@
     }
   },
   "session": {},
-  "auth": {},
+  "auth": {
+    "./middleware/logger": {
+      "enabled": true
+    }
+  },
   "parse": {},
   "routes": {
     "loopback#rest": {
